@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastramento de Carros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="ul">
+                <li>Home</li>
+                <li>Dirigir</li>
+                <li>Minha Conta</li>
+                <li>Configurações</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="logo">
+            <img src="./assets/img/image-logo.png" alt="logo">
+
+        </section>
+        <section class="section">
+            <h1>Cadastrar novo carro</h1>
+            <form class="cadastrarVeiculo">
+                <label for="marca">Marca:</label>
+                <input class="input" type="text" name="marca" id="marca" placeholder="Digite a marca do veiculo" required>
+
+                <label for="modelo">Modelo:</label>
+                <input class="input" type="text" name="modelo" id="modelo" placeholder="Digite o modelo do veiculo" required>
+
+                <label for="cor">Cor:</label>
+                <input class="input" type="text" name="cor" id="cor" placeholder="Digite a cor do veiculo" required>
+
+                <label for="ano">Ano:</label>
+                <input class="input" type="number" name="ano" id="ano" placeholder="Digite o ano do veiculo" required>
+
+                <label for="placa">Placa:</label>
+                <input class="input" type="text" name="placa" id="placa" placeholder="Digite a placa do veiculo" minlength="7" maxlength="7" required>
+                <button
+                    onclick="cadastrarVeiculo(marca.value, modelo.value, cor.value, ano.value, placa.value)" id="button">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="tabela">
+            <h1>Veículos cadastrados:</h1>
+            <table id="tabela">
+                <tr>
+
+                    <td><strong>Marca</strong></td>
+                    <td><strong>Modelo</strong></td>
+                    <td><strong>Cor</strong></td>
+                    <td><strong>Ano</strong></td>
+                    <td><strong>Placa</strong></td>
+                </tr>
+            </table>
+            <h3 class="h3">Nenhum carro cadastrado!</h3>
+        </section>
+
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
